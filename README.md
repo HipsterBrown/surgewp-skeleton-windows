@@ -45,10 +45,12 @@ SurgeWP Skeleton is a starting point for modern, professional WordPress developm
 
 ### Project Initialization
 
-1. Change directories into the folder where you keep your github repositories. For example:
+1. Change directories into the `www/` folder in your vagrant workspace (the folder where you cloned surgewp-vagrant) or the folder where you keep your github repositories if you're not using vagrant. For example:
 
   ```
-  $ cd ~/username/github/
+  cd ~/username/surgewp-vagrant/www/
+  // or 
+  cd ~/username/github/
   ```
 2. Copy the SurgeWP Skeleton into a new project folder:
 
@@ -76,13 +78,22 @@ SurgeWP Skeleton is a starting point for modern, professional WordPress developm
   $ git remote set-url origin git://your.git.repository
   ```
 
-### WordPress Installation
+### Vagrant Configuration
 
-1. If a local database doesn't exist for this project yet, go ahead and create it (refer to the SurgeWP bible "Creating a local database with phpMyAdmin" if you need help).
-2. Open your `local-config.php` file and add the correct database credentials.
-3. If you haven't set up your `vhost` settings for this project yet, go ahead and do it now (refer to the SurgeWP bible "Configuring a project's local vhost in XAMPP" if you need help).
-4. Once you have your `vhost` configured for this project, you should be able to visit the local URL to install WordPress.
-  * The URL should look something like this: `local.project-name.dev/wp/wp-admin/install.php`
+The folder `vvv-init/` contains scripts to configure the virtual hosts config, nginx config, and database config settings for you. Refer to the `README.md` inside the folder to run them for your specific site. 
+
+### WordPress Installation and Configuration
+
+1. `vvv-init/` should take care of database setup for vagrant. To hookup your WordPress install with the new vagrant database, edit the `local-config.php` file.
+
+  ```
+  define( 'DB_NAME', 'wordpress' ); // Change to the local database for this project
+  define( 'DB_USER', 'root' ); 	    // Change to the user for that database
+  define( 'DB_PASSWORD', 'root' ); 	// Change to the password for that user
+  define( 'DB_HOST', 'localhost' ); // Probably 'localhost'
+  ```
+4. Visit the local vagrant URL in your browser to install WordPress (the hostname you defined in `vvv-init/vvv-hosts`):
+  * The URL should look something like this: `your-hostname/wp/wp-admin/install.php`
 5. After you install WordPress, log in and go to the `Settings -> General` section.
   * Find where it says `Site Address (URL)`.
   * Change it from `local.project-name.dev/wp` to `local.project-name.dev`
@@ -167,39 +178,31 @@ SurgeWP Skeleton is a starting point for modern, professional WordPress developm
   ```
 
 ### Finalizing
-1. Edit the `.gitignore` to look like this:
 
-  ```
-  /shared
-  /sql-dump-*.sql
-  /db-sync
-  /content/upgrade/
-  /node_modules/
-  ```
-2. Install NPM dependencies:
+1. Install NPM dependencies:
 
   ```
   npm install
   ```
-3. Start Grunt and make changes to the starter theme:
+2. Start Grunt and make changes to the starter theme:
   
   ```
   grunt watch
   ```
-4. Push your code:
+3. Push your code:
   
   ```
   $ git add .
   $ git commit -m "commit message"
   $ git push -u origin --all
   ```
-5. Run Capistrano setup and deploy to staging:
+4. Run Capistrano setup and deploy to staging:
   
   ```
   $ cap deploy:setup
   $ cap staging deploy
   ```
-6. Other Capistrano commands:
+5. Other Capistrano commands:
   
   ```
   $ cap production deploy # Deploys to production
