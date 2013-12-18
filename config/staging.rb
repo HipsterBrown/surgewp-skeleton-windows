@@ -7,7 +7,7 @@ set :deploy_to, "/www/example.com"
 
 # OPTION 1
 
-role :web, "10.254.2.21"
+role :web, "0.0.0.0"
 # role :web, "second web server here"
 # role :web, "third web server here, etc"
 
