@@ -1,5 +1,5 @@
 # SurgeWP Skeleton
-SurgeWP Skeleton is a starting point for modern, professional WordPress development. Currently being battle tested at [SurgeWP](http://www.surgewp.com/).
+SurgeWP Skeleton is a starting point for modern, professional WordPress development. Currently being battle tested at [SurgeWP](http://www.surgewp.com/). Intended to be used with [SurgeWP-Vagrant](https://github.com/SurgeWP/surgewp-vagrant).
 
   * **Version**: 0.1.0
   * **Contributors**:
