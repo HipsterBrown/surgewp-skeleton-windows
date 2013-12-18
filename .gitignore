@@ -1,0 +1,7 @@
+/shared
+/sql-dump-*.sql
+/db-sync
+/content/upgrade/
+/node_modules/
+/wordpress/
+.DS_Store
