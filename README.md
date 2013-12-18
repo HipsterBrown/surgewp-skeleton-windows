@@ -1,7 +1,7 @@
 # SurgeWP Skeleton
 SurgeWP Skeleton is a starting point for modern, professional WordPress development. Currently being battle tested at [SurgeWP](http://www.surgewp.com/). Intended to be used with [SurgeWP-Vagrant](https://github.com/SurgeWP/surgewp-vagrant).
 
-  * **Version**: 0.1.0
+  * **Version**: 0.0.2
   * **Contributors**:
     * Connor Black 
       * Github: [@connorblack](http://github.com/connorblack)
@@ -10,7 +10,7 @@ SurgeWP Skeleton is a starting point for modern, professional WordPress developm
 
 ### What You Get
 
-  * WordPress 3.6.1
+  * WordPress 3.8
   * [Roots](http://roots.io/) starter theme (with [Bootstrap](http://getbootstrap.com/) goodness)
   * [Grunt](http://gruntjs.com/) workflow
   * [Capistrano](http://www.capistranorb.com/) and deployment recipes
@@ -24,12 +24,11 @@ SurgeWP Skeleton is a starting point for modern, professional WordPress developm
 ### Overview
   
   * `config/`: configuration for Capistrano deployment 
-  * `content/themes/`: theme development
-  * `content/plugins/`: plugin development
+  * `content/`: theme development
   * `lib/`: ruby tasks
   * `shared/`: WordPress uploads
-  * `WordPress-Dropins/`: utilized plugins
-  * `wp/`: WordPress install
+  * `vvv-init/`: scripts to configure vagrant for the new site
+  * `wordpress/`: WordPress install
   * `Capfile`: Capistrano entry point
   * `Gruntfile.js`: Grunt workflow for roots-based starter theme
   * `index.php`: WordPress entry point
