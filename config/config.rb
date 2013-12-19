@@ -10,15 +10,33 @@ set :scm, :git
 # Set Git Submodules
 set :git_enable_submodules, 1
 
+# List of folder/files to exclude in the dpeloyment
+
+set :copy_exclude, [
+	".git", 
+	".gitmodules", 
+	".DS_Store", 
+	".gitignore", 
+	"README.md", 
+	"package.json",
+	"Capfile",
+	"local-config.php",
+	"node_modules",
+	"config",
+	"lib",
+	"vvv-init",
+	"Gruntfile.js"
+]
+
+# How many releases to keep
+
+set :keep_releases, 10
+
 # This should be the same as :deploy_to in production.rb
 set :production_deploy_to, '/www/example.com'
 
 # The domain name used for your staging environment
 set :staging_domain, 'staging.example.com'
-
-# Set your server username
-set :user, "username"
-set :use_sudo, true
 
 # Tells capistrano to create a pty for each process
 default_run_options[:pty] = true

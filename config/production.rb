@@ -1,21 +1,19 @@
 # SurgeWP Capistrano production deployment file
 
+# Username and password for the production server
+
+set :user, "username"
+set :password, "password"
+set :use_sudo, true
+
 # Where should the site should deploy to
 set :deploy_to, "/www/example.com"
 
 # Now configure the servers for this environment
 
 role :web, "0.0.0.0"
-# role :web, "second web server here"
-# role :web, "third web server here, etc"
 
-# role :memcached, "your memcached server IP address or hostname here"
-# role :memcached, "second memcached server here, etc"
+# Branch to be used for production
 
-# OPTION 2
+set :branch, "master"
 
-# If your web servers are the same as your memcached servers,
-# comment out all the "role" lines and use "server" lines:
-
-# server "your web/memcached server IP address or hostname here", :web, :memcached
-# server "second web/memcached server here", :web, :memcached
