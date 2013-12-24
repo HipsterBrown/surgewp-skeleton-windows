@@ -5,10 +5,12 @@
     "type": "git",
     "url": "git://github.com/SurgeWP/surgewp-skeleton.git"
   },
-  "licenses": [{
-    "type": "MIT",
-    "url": "http://opensource.org/licenses/MIT"
-  }],
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
   "engines": {
     "node": ">= 0.10.0"
   },
@@ -18,7 +20,10 @@
     "grunt-contrib-jshint": "~0.6.4",
     "grunt-contrib-uglify": "~0.2.4",
     "grunt-contrib-watch": "~0.5.3",
-    "grunt-contrib-less": "~0.8.1",
+    "grunt-contrib-sass": "~0.6.0",
     "grunt-wp-version": "~0.1.0"
+  },
+  "dependencies": {
+    "grunt": "~0.4.2"
   }
 }
