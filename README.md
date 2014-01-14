@@ -15,7 +15,6 @@ SurgeWP Skeleton is a starting point for modern, professional WordPress developm
   * [Grunt](http://gruntjs.com/) workflow
   * [Capistrano](http://www.capistranorb.com/) and deployment recipes
   * In the works:
-    * Incorporation with Vagrant: [SurgeWP Vagrant](https://github.com/SurgeWP/surgewp-vagrant)
     * Yeoman generator
     * Staging and production provisioning
   * Special thanks:
@@ -80,7 +79,7 @@ SurgeWP Skeleton is a starting point for modern, professional WordPress developm
 
 ### Vagrant Configuration
 
-The folder `vvv-init/` contains scripts to configure the virtual hosts config, nginx config, and database config settings for you. Refer to the `README.md` inside the folder to run them for your specific site. 
+The folder `vvv-init/` contains scripts to configure the virtual hosts config, nginx config, and database config settings of your vagrant instance. Refer to the `README.md` inside this folder to run them for your specific site. 
 
 ### WordPress Installation and Configuration
 
@@ -109,7 +108,7 @@ The folder `vvv-init/` contains scripts to configure the virtual hosts config, n
   ```
   set :application, "Appication title"
   ```
-3. Set your github repository (make sure it's read only, or else you'll have to add a deploy SSH key to github):
+3. Set your github repository (if it's a public repo you can make the URL read only and you'll be fine. If it's private you'll have to either configure capistrano to use your public keys through ssh forwarding, or add a deploy key to the github repo https://help.github.com/articles/managing-deploy-keys):
 
   ```
   set :repository,  "Set your git repository location here"
@@ -124,7 +123,7 @@ The folder `vvv-init/` contains scripts to configure the virtual hosts config, n
   ```
   set :staging_domain, 'staging.example.com'
   ```
-6. Set the user that Capistrano will use to SSH into the server with and set the sudo flag. Make sure it has all the necessary permissions (you'll almost always use your username which should have the proper permissions):
+6. Set the user that Capistrano will use to SSH into the server with and set the sudo flag. Make sure it has all the necessary permissions (the easiest way is to create a "deployer" user on the server you're deploying to):
 
   ```
   set :user, "username"
