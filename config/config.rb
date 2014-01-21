@@ -18,7 +18,6 @@ set :copy_exclude, [
 	"Capfile",
 	"local-config.php",
 	"node_modules",
-	"deployment",
 	"vvv-init",
 	"Gruntfile.js"
 ]
