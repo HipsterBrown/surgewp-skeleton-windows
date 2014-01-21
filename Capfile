@@ -1,12 +1,12 @@
 require 'rubygems'
 require 'railsless-deploy'
-load 'lib/misc'
+load 'deployment/lib/misc'
 
 # Multistage
 set :stages, ['production', 'staging']
 set :default_stage, 'production'
 require 'capistrano/ext/multistage'
 
-load 'lib/tasks'
-load 'lib/deploy' # Loads config/config.rb after
-load 'lib/deploy-after'
+load 'deployment/lib/tasks'
+load 'deployment/lib/deploy' # Loads config/config.rb after
+load 'deployment/lib/deploy-after'
