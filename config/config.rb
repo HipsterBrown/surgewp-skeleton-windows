@@ -7,14 +7,10 @@ set :application, "Appication title"
 set :repository,  "Set your git repository location here"
 set :scm, :git
 
-# Set Git Submodules
-set :git_enable_submodules, 1
-
 # List of folder/files to exclude in the dpeloyment
 
 set :copy_exclude, [
 	".git", 
-	".gitmodules", 
 	".DS_Store", 
 	".gitignore", 
 	"README.md", 
@@ -22,8 +18,6 @@ set :copy_exclude, [
 	"Capfile",
 	"local-config.php",
 	"node_modules",
-	"config",
-	"lib",
 	"vvv-init",
 	"Gruntfile.js"
 ]
@@ -40,6 +34,9 @@ set :staging_domain, 'staging.example.com'
 
 # Tells capistrano to create a pty for each process
 default_run_options[:pty] = true
+
+# Uses your local SSH keys
+ssh_options[:forward_agent] = true
 
 # Database
 # Set the values for host, user, pass, and name for both production and staging.

@@ -4,7 +4,7 @@
 
 set :user, "username"
 set :password, "password"
-set :use_sudo, true
+set :use_sudo, false
 
 # Where should the site should deploy to
 set :deploy_to, "/www/example.com"
