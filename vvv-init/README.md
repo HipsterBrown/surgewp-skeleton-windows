@@ -1,7 +1,7 @@
 ### Configuring VVV-init for a new project
 
 1. Add your virtual hosts to `vvv-hosts`
-2. Set your site name and database name in `vvv-init.sh`
+2. Add your site name and database name in `vvv-init.sh`
 3. Add your server name and path to project folder in `vvv-nginx.conf`
 4. Add your URL in `wp-cli.yml`
 5. Run `vagrant reload --provision`
