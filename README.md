@@ -36,10 +36,14 @@ SurgeWP Skeleton is a starting point for modern, professional WordPress developm
 
 ### Dependencies
 
-1. Install Capistrano and friends: 
+1. Install Capistrano (must be 2.15.5) and friends: 
   
   ```
-  $ sudo gem install capistrano capistrano-ext railsless-deploy
+  $ sudo gem install capistrano -v "=2.15.5"
+  ```
+
+  ```
+  $ sudo gem install capistrano-ext railsless-deploy
   ```
 
 ### Project Initialization
