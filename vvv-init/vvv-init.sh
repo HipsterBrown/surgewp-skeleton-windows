@@ -9,8 +9,6 @@
 SITE_NAME="Site Name"
 # The name (to be) used by MySQL for the DB
 DB_NAME="site_name"
-# The repo URL in SSH format, e.g. git@github.com:SurgeWP/foo.git
-REPO_SSH_URL="git@github.com:SurgeWP/site_name.git"
 # A bash array of search|replace pairs as strings, separated by spaces. 
 # This is used to fixup a database from a production environment 
 # being loaded into a dev environment.
