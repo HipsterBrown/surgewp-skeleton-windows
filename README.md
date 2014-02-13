@@ -96,10 +96,10 @@ The folder `vvv-init/` contains scripts to configure the virtual hosts config, n
   define( 'DB_HOST', 'localhost' ); // Probably 'localhost'
   ```
 4. Visit the local vagrant URL in your browser to install WordPress (the hostname you defined in `vvv-init/vvv-hosts`):
-  * The URL should look something like this: `your-hostname/wp/wp-admin/install.php`
+  * The URL should look something like this: `your-hostname/wordpress/wp-admin/install.php`
 5. After you install WordPress, log in and go to the `Settings -> General` section.
   * Find where it says `Site Address (URL)`.
-  * Change it from `local.project-name.dev/wp` to `local.project-name.dev`
+  * Change it from `your-hostname.dev/wordpress` to `your-hostname.dev/`
   * Don't change the section `WordPress Address (URL)`!
 6. WordPress should now be ready to go.
 
