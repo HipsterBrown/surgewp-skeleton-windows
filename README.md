@@ -153,7 +153,12 @@ The folder `vvv-init/` contains scripts to configure the virtual hosts config, n
   	}
   end
   ```
-  
+8. Make sure you have a `.pem` file in this location.
+
+```
+../../config/*.pem
+```  
+
 #### `staging.rb`
 1. Open `config/staging.rb`.
 2. Set on the server where the staging files will be deployed to:

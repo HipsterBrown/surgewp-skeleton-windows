@@ -74,3 +74,11 @@ namespace :db do
 		end
 	end
 end
+
+namespace :permissions do
+	desc "Changes the folder permissions to the correct deployer group"
+	task :set_permissions do
+		run "(sudo chown -R www-data:www-data #{fetch:deploy_to})"
+	end
+end
+

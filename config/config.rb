@@ -4,8 +4,15 @@ set :application, "Appication title"
 
 # Make sure to use a read only github URL, i.e git://github.com/connorblack/test-site.git
 
-set :repository,  "Set your git repository location here"
+# Set your git repository location here
+set :repository,  "https://github.com/SurgeWP/surgewp-skeleton.git"
 set :scm, :git
+
+
+default_run_options[:pty] = true
+ssh_options[:auth_methods] = ["publickey"]
+ssh_options[:forward_agent] = true
+ssh_options[:keys] = ["../../config/surge_aws.pem"]
 
 # List of folder/files to exclude in the dpeloyment
 
@@ -37,6 +44,9 @@ default_run_options[:pty] = true
 
 # Uses your local SSH keys
 ssh_options[:forward_agent] = true
+
+# Set Git Submodules
+set :git_enable_submodules, 1
 
 # Database
 # Set the values for host, user, pass, and name for both production and staging.
