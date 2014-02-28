@@ -9,10 +9,6 @@
 SITE_NAME="Site Name"
 # The name (to be) used by MySQL for the DB
 DB_NAME="site_name"
-# A bash array of search|replace pairs as strings, separated by spaces. 
-# This is used to fixup a database from a production environment 
-# being loaded into a dev environment.
-SEARCH_REPLACE=( "site_name.wpengine.com|site_name.dev" "another_site_name.example.com|pearson.dev" )
 
 # ----------------------------------------------------------------
 # You should not need to edit below this point. Famous last words.

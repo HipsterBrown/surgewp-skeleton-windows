@@ -8,15 +8,15 @@ module.exports = function(grunt) {
       },
       all: [
         'Gruntfile.js',
-        'content/themes/roots/assets/js/*.js',
-        'content/themes/roots/!assets/js/scripts.min.js'
+        'content/themes/surgewp-starter/assets/js/*.js',
+        'content/themes/surgewp-starter/!assets/js/scripts.min.js'
       ]
     },
     sass: {
       dist: {
         files: {
-          'content/themes/roots/assets/css/main.min.css': [
-            'content/themes/roots/assets/sass/app.scss'
+          'content/themes/surgewp-starter/assets/css/main.min.css': [
+            'content/themes/surgewp-starter/assets/sass/app.scss'
           ]
         },
         options: {
@@ -30,43 +30,43 @@ module.exports = function(grunt) {
     uglify: {
       dist: {
         files: {
-          'content/themes/roots/assets/js/scripts.min.js': [
-            'content/themes/roots/assets/js/plugins/bootstrap/transition.js',
-            'content/themes/roots/assets/js/plugins/bootstrap/alert.js',
-            'content/themes/roots/assets/js/plugins/bootstrap/button.js',
-            'content/themes/roots/assets/js/plugins/bootstrap/carousel.js',
-            'content/themes/roots/assets/js/plugins/bootstrap/collapse.js',
-            'content/themes/roots/assets/js/plugins/bootstrap/dropdown.js',
-            'content/themes/roots/assets/js/plugins/bootstrap/modal.js',
-            'content/themes/roots/assets/js/plugins/bootstrap/tooltip.js',
-            'content/themes/roots/assets/js/plugins/bootstrap/popover.js',
-            'content/themes/roots/assets/js/plugins/bootstrap/scrollspy.js',
-            'content/themes/roots/assets/js/plugins/bootstrap/tab.js',
-            'content/themes/roots/assets/js/plugins/bootstrap/affix.js',
-            'content/themes/roots/assets/js/plugins/*.js',
-            'content/themes/roots/assets/js/_*.js'
+          'content/themes/surgewp-starter/assets/js/scripts.min.js': [
+            'content/themes/surgewp-starter/assets/js/plugins/bootstrap/transition.js',
+            'content/themes/surgewp-starter/assets/js/plugins/bootstrap/alert.js',
+            'content/themes/surgewp-starter/assets/js/plugins/bootstrap/button.js',
+            'content/themes/surgewp-starter/assets/js/plugins/bootstrap/carousel.js',
+            'content/themes/surgewp-starter/assets/js/plugins/bootstrap/collapse.js',
+            'content/themes/surgewp-starter/assets/js/plugins/bootstrap/dropdown.js',
+            'content/themes/surgewp-starter/assets/js/plugins/bootstrap/modal.js',
+            'content/themes/surgewp-starter/assets/js/plugins/bootstrap/tooltip.js',
+            'content/themes/surgewp-starter/assets/js/plugins/bootstrap/popover.js',
+            'content/themes/surgewp-starter/assets/js/plugins/bootstrap/scrollspy.js',
+            'content/themes/surgewp-starter/assets/js/plugins/bootstrap/tab.js',
+            'content/themes/surgewp-starter/assets/js/plugins/bootstrap/affix.js',
+            'content/themes/surgewp-starter/assets/js/plugins/*.js',
+            'content/themes/surgewp-starter/assets/js/_*.js'
           ]
         },
         options: {
           // JS source map: to enable, uncomment the lines below and update sourceMappingURL based on your install
           // sourceMap: 'assets/js/scripts.min.js.map',
-          // sourceMappingURL: '/app/themes/roots/assets/js/scripts.min.js.map'
+          // sourceMappingURL: '/app/themes/surgewp-starter/assets/js/scripts.min.js.map'
         }
       }
     },
     version: {
       options: {
-        file: 'content/themes/roots/lib/scripts.php',
-        css: 'content/themes/roots/assets/css/main.min.css',
-        cssHandle: 'roots_main',
-        js: 'content/themes/roots/assets/js/scripts.min.js',
-        jsHandle: 'content/themes/roots/roots_scripts'
+        file: 'content/themes/surgewp-starter/lib/scripts.php',
+        css: 'content/themes/surgewp-starter/assets/css/main.min.css',
+        cssHandle: 'surgewp-starter_main',
+        js: 'content/themes/surgewp-starter/assets/js/scripts.min.js',
+        jsHandle: 'content/themes/surgewp-starter/surgewp-starter_scripts'
       }
     },
     watch: {
       sass: {
         files: [
-          'content/themes/roots/assets/sass/*.scss'
+          'content/themes/surgewp-starter/assets/sass/*.scss'
         ],
         tasks: ['sass', 'version']
       },
@@ -83,17 +83,17 @@ module.exports = function(grunt) {
           livereload: false
         },
         files: [
-          'content/themes/roots/assets/css/main.min.css',
-          'content/themes/roots/assets/js/scripts.min.js',
-          'content/themes/roots/templates/*.php',
-          'content/themes/roots/*.php'
+          'content/themes/surgewp-starter/assets/css/main.min.css',
+          'content/themes/surgewp-starter/assets/js/scripts.min.js',
+          'content/themes/surgewp-starter/templates/*.php',
+          'content/themes/surgewp-starter/*.php'
         ]
       }
     },
     clean: {
       dist: [
-        'content/themes/roots/assets/css/main.min.css',
-        'content/themes/roots/assets/js/scripts.min.js'
+        'content/themes/surgewp-starter/assets/css/main.min.css',
+        'content/themes/surgewp-starter/assets/js/scripts.min.js'
       ]
     }
   });
